@@ -4,8 +4,11 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import com.taotao.common.utils.SpringApplicationContext;
 
 /**
  * 商城管理服务入口
@@ -21,7 +24,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class TaotaoManagerServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TaotaoManagerServiceApplication.class, args);
+		ApplicationContext context = SpringApplication.run(TaotaoManagerServiceApplication.class, args);
+		SpringApplicationContext.setApplicationContext(context);
 	}
 
 }
