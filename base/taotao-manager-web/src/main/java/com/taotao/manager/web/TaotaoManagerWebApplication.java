@@ -2,6 +2,7 @@ package com.taotao.manager.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  * 商城管理表现层入口
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version
  */
 @SpringBootApplication
+@ImportResource(locations = {"classpath:dubbo/*.xml"})
 public class TaotaoManagerWebApplication {
 
 	public static void main(String[] args) {
