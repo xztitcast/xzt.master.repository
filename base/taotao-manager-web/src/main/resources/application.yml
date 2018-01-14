@@ -1,0 +1,10 @@
+#tomcat 端口及编码
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+    
+spring:
+  application:
+    name: taotao-manager-web
+    
