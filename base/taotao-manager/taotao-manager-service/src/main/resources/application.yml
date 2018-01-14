@@ -4,6 +4,9 @@ server:
   tomcat:
     uri-encoding: UTF-8
     
+logging:
+  config: classpath:logback-spring.xml
+    
 #数据源配置    
 spring:
   application:
