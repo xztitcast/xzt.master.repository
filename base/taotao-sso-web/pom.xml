@@ -2,26 +2,19 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.taotao.cn</groupId>
-    <artifactId>taotao-manager</artifactId>
+    <artifactId>base</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>taotao-manager-service</artifactId>
+  <artifactId>taotao-sso-web</artifactId>
   <dependencies>
-  		<dependency>
-  			<groupId>com.taotao.cn</groupId>
-		    <artifactId>taotao-manager-dao</artifactId>
-		    <version>0.0.1-SNAPSHOT</version>
-  		</dependency>
-  		
-  		<dependency>
-  			<groupId>com.taotao.cn</groupId>
-		    <artifactId>taotao-manager-interface</artifactId>
-		    <version>0.0.1-SNAPSHOT</version>
-  		</dependency>
-  
   		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
 		
 		<dependency>
@@ -63,12 +56,6 @@
 		    <groupId>com.101tec</groupId>
 		    <artifactId>zkclient</artifactId>
 		    <version>0.10</version>
-		</dependency>
-		
-  		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
   </dependencies>
   <build>
