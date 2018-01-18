@@ -12,6 +12,12 @@
 		    <artifactId>taotao-manager-pojo</artifactId>
 		    <version>0.0.1-SNAPSHOT</version>
   		</dependency>
+  		
+  		<dependency>
+  			<groupId>com.taotao.cn</groupId>
+		    <artifactId>taotao-sso-pojo</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+  		</dependency>
   
   		<dependency>
 	   		<groupId>com.github.pagehelper</groupId>
