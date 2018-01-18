@@ -2,20 +2,20 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.taotao.cn</groupId>
-    <artifactId>taotao-manager</artifactId>
+    <artifactId>taotao-security</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>taotao-manager-service</artifactId>
+  <artifactId>taotao-security-service</artifactId>
   <dependencies>
   		<dependency>
   			<groupId>com.taotao.cn</groupId>
-		    <artifactId>taotao-manager-dao</artifactId>
+		    <artifactId>taotao-security-dao</artifactId>
 		    <version>0.0.1-SNAPSHOT</version>
   		</dependency>
   		
   		<dependency>
   			<groupId>com.taotao.cn</groupId>
-		    <artifactId>taotao-manager-interface</artifactId>
+		    <artifactId>taotao-security-interface</artifactId>
 		    <version>0.0.1-SNAPSHOT</version>
   		</dependency>
   
@@ -71,12 +71,4 @@
 			<scope>test</scope>
 		</dependency>
   </dependencies>
-  <build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-  </build>
 </project>

@@ -2,20 +2,14 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.taotao.cn</groupId>
-    <artifactId>taotao-manager</artifactId>
+    <artifactId>taotao-sso</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>taotao-manager-service</artifactId>
+  <artifactId>taotao-sso-service</artifactId>
   <dependencies>
   		<dependency>
   			<groupId>com.taotao.cn</groupId>
 		    <artifactId>taotao-manager-dao</artifactId>
-		    <version>0.0.1-SNAPSHOT</version>
-  		</dependency>
-  		
-  		<dependency>
-  			<groupId>com.taotao.cn</groupId>
-		    <artifactId>taotao-manager-interface</artifactId>
 		    <version>0.0.1-SNAPSHOT</version>
   		</dependency>
   
