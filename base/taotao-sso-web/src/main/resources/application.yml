@@ -1,0 +1,11 @@
+#tomcat端口
+server:
+  port: 8086
+  tomcat:
+    uri-encoding: UTF-8
+
+#应用名
+spring:
+  application:
+    name: taotao-sso-web
+    
