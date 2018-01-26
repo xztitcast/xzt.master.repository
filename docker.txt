@@ -1,0 +1,53 @@
+docker 安装 root 权限 centos7 内核版本必须为3.10
+
+设置 Docker CE 资源库:       
+yum install -y yum-utils
+
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+ //上述https是国外的请求有时候访问不了可以使用国内阿里云的
+yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+yum makecache fast 
+
+yum list docker-ce --showduplicates | sort -r //查询duoker版本列表
+
+yum install -y docker-ce-17.09.1.ce-1.el7.centos.x86_64 选择最新版本安装
+
+检查安装是否成功
+docker version
+
+启动docker
+systemctl start docker 或者 service docker start
+
+使用非root用户访问docker
+groupadd docker 添加docker组
+gpasswd -a ${user} docker 将非root用户添加到docker组中
+service docker restart 
+
+二、docker 镜像加速与远程访问
+
+ExecStart=/usr/bin/dockerd --registry-mirror=https://uehoggr4.mirror.aliyuncs.com -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock -H tcp://0.0.0.0:7654
+（此处默认2375为主管理端口，unix:///var/run/docker.sock用于本地管理，7654是备用的端口）
+
+将管理地址写入 /etc/profile   
+echo 'export DOCKER_HOST=tcp://0.0.0.0:2375' >> /etc/profile   
+source /etc/profile
+systemctl daemon-reload && service docker restart  
+
+三 安装docker-machine
+docker在国外需要更改hosts文件配置香港的服务器
+219.76.4.4 github-cloud.s3.amazonaws.com 
+
+
+***********************centos 7 docker 问题篇***************************************
+测试docker 安装mysql 发现无法使用systemctl命令后来百度一圈显示是centos BUG 7.2版本会修复
+如今我使用的是7.4一样
+好多百度友给出的解答时启动 CMD加上/usr/sbin/init --privileged
+docker run -itd --privileged --name mysql -p 3306:3306 centos /usr/sbin/init 
+上述命令可以玩解决但是 不能使用-it 参数会出现容器卡死现象
+docker exec -it mysql 使用docker在同一容器中启动进程可以暂时解决
+
+
+
+
