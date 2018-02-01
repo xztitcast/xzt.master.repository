@@ -62,5 +62,3 @@ content1代表mycat_sequence表在哪个节点上
 
 第五：
 重启mycat
-abchhheeee
-
