@@ -5,14 +5,14 @@ spring:
   application:
     name: taotao-web
   datasource:
-    url: 
-    username: 
-    password: 
-    driver-class-name: 
-    type: 
+    url: jdbc:mysql://${dburl:192.168.11.55:3306}/hdy_p2p?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false
+    username: root
+    password: devadmin123@
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
   jpa:
     database: mysql
-    database-platform: 
+    database-platform: org.hibernate.dialect.MySQL5Dialect
     hibernate:
       ddl-auto: none
     show-sql: true
