@@ -1,0 +1,21 @@
+server:
+  port: 7777
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/xztitcast/xzt.master.repository.git
+          #username: 
+          #password: 
+          
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123456@localhost:8761/eureka/
